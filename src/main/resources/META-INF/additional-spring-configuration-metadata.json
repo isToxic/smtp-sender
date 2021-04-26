@@ -1,0 +1,98 @@
+{
+  "properties": [
+    {
+      "name": "mail-sender.mail.user-name",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.mail.user-name."
+    },
+    {
+      "name": "mail-sender.mail.password",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.mail.password."
+    },
+    {
+      "name": "mail-sender.mail.host",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.mail.host."
+    },
+    {
+      "name": "mail-sender.connect-timeout-millis",
+      "type": "java.lang.Long",
+      "description": "Description for mail-sender.connect-timeout-millis."
+    },
+    {
+      "name": "mail-sender.request-timeout-millis",
+      "type": "java.lang.Long",
+      "description": "Description for mail-sender.request-timeout-millis."
+    },
+    {
+      "name": "mail-sender.send.login",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.send.login."
+    },
+    {
+      "name": "mail-sender.send.password",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.send.password."
+    },
+    {
+      "name": "mail-sender.send.ttl",
+      "type": "java.lang.Long",
+      "description": "Description for mail-sender.send.ttl."
+    },
+    {
+      "name": "mail-sender.send.ttlUnit",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.send.ttlUnit."
+    },
+    {
+      "name": "mail-sender.send.url",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.send.url."
+    },
+    {
+      "name": "mail-sender.send.service-number",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.send.service-number."
+    },
+    {
+      "name": "mail-sender.mail.port",
+      "type": "java.lang.Integer",
+      "description": "Description for mail-sender.mail.port."
+    },
+    {
+      "name": "mail-sender.mail.mailbox",
+      "type": "java.lang.String",
+      "description": "Description for mail-sender.mail.mailbox."
+    },
+    {
+      "name": "mail-sender.mail.polling-ms",
+      "type": "java.lang.Long",
+      "description": "Description for mail-sender.mail.polling-ms."
+    },
+    {
+      "name": "mail-sender.mail.connection-poll-size",
+      "type": "java.lang.Integer",
+      "description": "Description for mail-sender.mail.connection-poll-size."
+    },
+    {
+      "name": "mail-sender.mail.max-poll-size",
+      "type": "java.lang.Integer",
+      "description": "Description for mail-sender.mail.max-poll-size."
+    },
+    {
+      "name": "mail-sender.mail.max-messages-per-poll",
+      "type": "java.lang.Integer",
+      "description": "Description for mail-sender.mail.max-messages-per-poll."
+    },
+    {
+      "name": "mail-sender.mail.debug",
+      "type": "java.lang.Boolean",
+      "description": "Description for mail-sender.mail.debug."
+    },
+    {
+      "name": "mail-sender.mail.partialfetch",
+      "type": "java.lang.Boolean",
+      "description": "Description for mail-sender.mail.partialfetch."
+    }
+  ] }

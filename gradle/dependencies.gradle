@@ -1,0 +1,36 @@
+def springBootVer = '2.4.5'
+def lombokVer = '1.18.20'
+def javaxVer = '2.0.1.Final'
+def httpClientVer = '4.5.13'
+def restAssuredVer = '4.2.1'
+def awaitilityVer = '4.0.3'
+def springIntegrationVer = '5.4.6'
+def javaxMailVer = '1.6.2'
+def vavrVer = '0.9.0'
+def commonsEmailVer = '1.5'
+
+ext {
+    libs = [
+            springBootStarterIntegration    : "org.springframework.boot:spring-boot-starter-integration:$springBootVer",
+            springBootStarterIntegrationMail: "org.springframework.integration:spring-integration-mail:$springIntegrationVer",
+            springBootStarterWeb            : "org.springframework.boot:spring-boot-starter-web:$springBootVer",
+            httpClient                      : "org.apache.httpcomponents:httpclient:$httpClientVer",
+            javaxMail                       : "com.sun.mail:javax.mail:$javaxMailVer",
+            lombok                          : "org.projectlombok:lombok:$lombokVer",
+            validation                      : "javax.validation:validation-api:$javaxVer",
+            springBootStarterTest           : "org.springframework.boot:spring-boot-starter-test:$springBootVer",
+            restAssused                     : "io.rest-assured:rest-assured:$restAssuredVer",
+            restAssusedCommon               : "io.rest-assured:rest-assured-common:$restAssuredVer",
+            springBootStarterIntegrationTest: "org.springframework.integration:spring-integration-test:$springIntegrationVer",
+            restAssuredJson                 : "io.rest-assured:json-path:$restAssuredVer",
+            restAssuredXml                  : "io.rest-assured:xml-path:$restAssuredVer",
+            awaitility                      : "org.awaitility:awaitility:$awaitilityVer",
+            vavr                            : "io.vavr:vavr:$vavrVer",
+            commonsEmail                    : "org.apache.commons:commons-email:$commonsEmailVer"
+    ]
+
+    libs.spring = [libs.springBootStarterWeb, libs.springBootStarterIntegration, libs.springBootStarterIntegrationMail]
+    libs.test = [libs.springBootStarterTest, libs.awaitility, libs.restAssused, libs.springBootStarterIntegrationTest,
+                 libs.restAssusedCommon, libs.restAssuredJson, libs.restAssuredXml]
+    libs.common = [libs.validation, libs.lombok, libs.httpClient, libs.javaxMail, libs.vavr, libs.commonsEmail]
+}
