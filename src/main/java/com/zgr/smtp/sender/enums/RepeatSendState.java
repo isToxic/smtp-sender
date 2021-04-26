@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.enums;
+package com.zgr.smtp.sender.enums;
 
 public enum RepeatSendState {
     DELIVERED, READ

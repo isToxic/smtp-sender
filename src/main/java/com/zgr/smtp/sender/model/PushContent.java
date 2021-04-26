@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.model;
+package com.zgr.smtp.sender.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,5 +10,5 @@ import java.util.List;
 public class PushContent {
     private String contentUrl;
     private String contentCategory;
-    private List<com.zgr.mail.sender.model.Action> actions;
+    private List<Action> actions;
 }

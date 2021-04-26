@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.service;
+package com.zgr.smtp.sender.service;
 
 import org.springframework.stereotype.Service;
 

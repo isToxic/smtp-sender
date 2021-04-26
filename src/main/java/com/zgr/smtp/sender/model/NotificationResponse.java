@@ -1,6 +1,6 @@
-package com.zgr.mail.sender.model;
+package com.zgr.smtp.sender.model;
 
-import com.zgr.mail.sender.enums.ResponseError;
+import com.zgr.smtp.sender.enums.ResponseError;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

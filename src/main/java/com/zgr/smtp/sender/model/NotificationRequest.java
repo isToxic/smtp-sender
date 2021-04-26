@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.model;
+package com.zgr.smtp.sender.model;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,7 +10,7 @@ public class NotificationRequest {
     private String password;
     private boolean useTimeDiff;
     private String id;
-    private com.zgr.mail.sender.model.ScheduleInfo scheduleInfo;
+    private ScheduleInfo scheduleInfo;
     private String destAddr;
     private Message message;
     private CascadeChainLink cascadeChainLink;

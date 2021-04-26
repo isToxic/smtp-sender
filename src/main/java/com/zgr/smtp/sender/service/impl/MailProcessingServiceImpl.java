@@ -1,15 +1,15 @@
-package com.zgr.mail.sender.service.impl;
+package com.zgr.smtp.sender.service.impl;
 
-import com.zgr.mail.sender.enums.MessageType;
-import com.zgr.mail.sender.enums.RepeatSendState;
-import com.zgr.mail.sender.model.CascadeChainLink;
-import com.zgr.mail.sender.model.Data;
-import com.zgr.mail.sender.model.Message;
-import com.zgr.mail.sender.model.NotificationRequest;
-import com.zgr.mail.sender.model.NotificationResponse;
-import com.zgr.mail.sender.model.PushContent;
-import com.zgr.mail.sender.model.PushData;
-import com.zgr.mail.sender.service.MailProcessingService;
+import com.zgr.smtp.sender.enums.MessageType;
+import com.zgr.smtp.sender.enums.RepeatSendState;
+import com.zgr.smtp.sender.model.CascadeChainLink;
+import com.zgr.smtp.sender.model.Data;
+import com.zgr.smtp.sender.model.Message;
+import com.zgr.smtp.sender.model.NotificationRequest;
+import com.zgr.smtp.sender.model.NotificationResponse;
+import com.zgr.smtp.sender.model.PushContent;
+import com.zgr.smtp.sender.model.PushData;
+import com.zgr.smtp.sender.service.MailProcessingService;
 import io.vavr.control.Try;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

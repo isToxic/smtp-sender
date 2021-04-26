@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.enums;
+package com.zgr.smtp.sender.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonFormat;

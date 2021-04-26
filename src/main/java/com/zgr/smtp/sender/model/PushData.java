@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.model;
+package com.zgr.smtp.sender.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -10,6 +10,6 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper = true)
 public class PushData extends Data {
     private String title;
-    private com.zgr.mail.sender.model.PushContent content;
-    private com.zgr.mail.sender.model.CustomPayload customPayload;
+    private PushContent content;
+    private CustomPayload customPayload;
 }

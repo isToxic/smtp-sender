@@ -1,4 +1,4 @@
-package com.zgr.mail.sender;
+package com.zgr.smtp.sender;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,7 +1,7 @@
-package com.zgr.mail.sender.config;
+package com.zgr.smtp.sender.config;
 
 
-import com.zgr.mail.sender.service.MailProcessingService;
+import com.zgr.smtp.sender.service.MailProcessingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.zgr.mail.sender.model;
+package com.zgr.smtp.sender.model;
 
 import lombok.experimental.SuperBuilder;
 
