@@ -1,0 +1,44 @@
+mail-sender:
+  connect-timeout-millis: 10000
+  request-timeout-millis: 10000
+  send:
+    login: login
+    password: pass
+    ttl: 60
+    ttlUnit: MINUTES
+    url: htttp://send.to
+    send-state: READ
+    service-numbers:
+      sms: number
+      push: num
+  mail:
+    user-name:  all_mail
+    password: C6YQQkHOKLNjIT26
+    host: 10.241.0.244
+    port: 143
+    timeout: 20000
+    polling-ms: 10
+    connection-poll-size: 4
+    max-poll-size: 1
+    max-messages-per-poll: 1
+    debug: false
+    partialfetch: true
+    folders:
+      receive: INBOX
+      success: COMPLETE
+      error: ERROR
+
+# логировние: путь, уровни логирования
+logging:
+  #file: /var/log/mail-sender
+  level:
+    org.springframework: info
+    org.apache.http: info
+    com.zgr: info
+    org.springframework.integration.handler.LoggingHandler: off
+  file:
+    name: /opt/mail-sender/logs
+  logback:
+    rollingpolicy:
+      max-file-size: 20MB
+      max-history: 30

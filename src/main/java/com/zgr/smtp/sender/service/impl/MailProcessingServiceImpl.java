@@ -32,6 +32,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 @Slf4j
 @Service
@@ -75,7 +76,7 @@ public class MailProcessingServiceImpl implements MailProcessingService {
         if (requestBody != null) {
             RequestEntity<NotificationRequest> request = RequestEntity
                     .post(URI.create(url))
-                    .header(HttpHeaders.CONTENT_TYPE, APPLICATION_JSON_UTF8_VALUE)
+                    .header(HttpHeaders.CONTENT_TYPE, APPLICATION_JSON_VALUE)
                     .body(requestBody);
 
             log.info("Send notification request to:{} with body:{}", url, requestBody);
@@ -130,7 +131,7 @@ public class MailProcessingServiceImpl implements MailProcessingService {
         PushContent pushContent = PushContent.builder()
                 .actions(new ArrayList<>())
                 .build();
-        Message push = !subject.equals("null") ? Message.builder()
+        Message push = subject.equals("null") ? Message.builder()
                 .type(MessageType.PUSH)
                 .data(PushData.builder()
                         .content(pushContent)

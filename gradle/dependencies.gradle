@@ -8,6 +8,7 @@ def springIntegrationVer = '5.4.6'
 def javaxMailVer = '1.6.2'
 def vavrVer = '0.9.0'
 def commonsEmailVer = '1.5'
+def greenmailVer = '1.6.3'
 
 ext {
     libs = [
@@ -26,11 +27,12 @@ ext {
             restAssuredXml                  : "io.rest-assured:xml-path:$restAssuredVer",
             awaitility                      : "org.awaitility:awaitility:$awaitilityVer",
             vavr                            : "io.vavr:vavr:$vavrVer",
-            commonsEmail                    : "org.apache.commons:commons-email:$commonsEmailVer"
+            commonsEmail                    : "org.apache.commons:commons-email:$commonsEmailVer",
+            greenmail                       : "com.icegreen:greenmail:$greenmailVer"
     ]
 
     libs.spring = [libs.springBootStarterWeb, libs.springBootStarterIntegration, libs.springBootStarterIntegrationMail]
     libs.test = [libs.springBootStarterTest, libs.awaitility, libs.restAssused, libs.springBootStarterIntegrationTest,
-                 libs.restAssusedCommon, libs.restAssuredJson, libs.restAssuredXml]
+                 libs.restAssusedCommon, libs.restAssuredJson, libs.restAssuredXml, libs.greenmail]
     libs.common = [libs.validation, libs.lombok, libs.httpClient, libs.javaxMail, libs.vavr, libs.commonsEmail]
 }

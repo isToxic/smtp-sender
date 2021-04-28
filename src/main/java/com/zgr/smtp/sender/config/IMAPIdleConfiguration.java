@@ -123,7 +123,6 @@ public class IMAPIdleConfiguration {
                             folder.setSubscribed(true);
                             log.info("Folder: {} was created successfully", folderName);
                         }
-                        log.info("Service has all folders for work: {},{}", successMailbox, errorMailbox);
                     }
                 } catch (MessagingException e) {
                     e.printStackTrace();
@@ -134,6 +133,7 @@ public class IMAPIdleConfiguration {
             e.printStackTrace();
             log.error("Error getting folder", e);
         }
+        log.info("Service has all folders for work: {},{}", successMailbox, errorMailbox);
         return message;
     }
 }
