@@ -21,6 +21,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.match.MockRestRequestMatchers;
@@ -37,8 +38,9 @@ import java.util.List;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
-@SpringBootTest(classes = {MailProcessingService.class, MailProcessingServiceImpl.class, HttpConfig.class})
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
+@TestPropertySource(value = "file:src/test/resources/application.yml")
+@SpringBootTest(classes = {MailProcessingService.class, MailProcessingServiceImpl.class, HttpConfig.class})
 public class MailProcessingServiceTest {
     private final MailProcessingService mailProcessingService;
     private final RestTemplate restTemplate;
@@ -134,10 +136,7 @@ public class MailProcessingServiceTest {
     public void errorSendTest() {
         final String subject = GreenMailUtil.random();
         final String body = GreenMailUtil.random();
-        Assertions.assertThrows(ResourceAccessException.class,
-                () -> mailProcessingService.process(getMessage(subject, body, email)),
-                String.format("I/O error on POST request for \"%s\": null", url)
-        );
+        Assertions.assertThrows(AssertionError.class, () -> mailProcessingService.process(getMessage(subject, body, email)));
     }
 
     private MimeMessage getMessage(String sub, String body, String mail) throws MessagingException {

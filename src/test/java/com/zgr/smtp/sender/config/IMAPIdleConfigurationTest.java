@@ -20,6 +20,7 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
+import org.springframework.test.context.TestPropertySource;
 
 import javax.mail.internet.MimeMessage;
 import java.util.List;
@@ -35,6 +36,7 @@ import static org.mockito.Mockito.mock;
 @SpringBootTest(classes = SmtpSenderApplication.class)
 @Import(IMAPIdleConfigurationTest.TestConfig.class)
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
+@TestPropertySource(value = "file:src/test/resources/application.yml")
 public class IMAPIdleConfigurationTest {
     private static GreenMail greenMail;
     private static GreenMailUser user;
