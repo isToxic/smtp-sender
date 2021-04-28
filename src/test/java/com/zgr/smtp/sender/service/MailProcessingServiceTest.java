@@ -25,7 +25,6 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.match.MockRestRequestMatchers;
-import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.client.support.RestGatewaySupport;
 
@@ -52,7 +51,6 @@ public class MailProcessingServiceTest {
     private static final String email = phone.concat("@localhost");
     private static final String successFolder = GreenMailUtil.random();
     private static final String errorFolder = GreenMailUtil.random();
-    private MockRestServiceServer server;
 
     @Value("${mail-sender.send.url}")
     private String url;
@@ -92,7 +90,7 @@ public class MailProcessingServiceTest {
         final String body = GreenMailUtil.random();
         RestGatewaySupport gateway = new RestGatewaySupport();
         gateway.setRestTemplate(restTemplate);
-        server = MockRestServiceServer.createServer(gateway);
+        MockRestServiceServer server = MockRestServiceServer.createServer(gateway);
         String response = new ObjectMapper().writeValueAsString(
                 NotificationResponse.builder()
                         .id(GreenMailUtil.random())
