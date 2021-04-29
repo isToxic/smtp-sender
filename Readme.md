@@ -6,8 +6,28 @@
 - Java 8
 - Прописана переменная окружения $JAVA_HOME с путём хранения java
 
+
 Инструкция по установке
--
+- 
+Порядок установки:
+1) Настройка переменных окружения
+2) Запуск приложения
+
+###Запуск приложения в Docker (скрипт deploy.sh в архиве):
+1) Запустить скрипт: ./deploy.sh
+
+###Запуск приложения без docker:
+1) закомментировать пункт сборки и установки контейнера в deploy.sh
+```shell
+docker build -t smtp-sender .
+docker rm -f smtp-sender || true
+docker run -d --name smtp-sender smtp-sender
+```   
+2)Раскомментировать пункт
+```shell
+"$JAVA_HOME"/bin/java -jar -Xms256m -Xmx2048m ./smtp-sender-0.0.1-SNAPSHOT.jar
+```
+3) Сохранить и запустить deploy.sh
 
 Описание работы
 -
