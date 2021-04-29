@@ -60,7 +60,7 @@ deploy:
     - docker build -t gitlab.zagruzka.com:4567/integrations/mobicont/smtp-sender:$CI_COMMIT_REF_NAME .
     - docker push gitlab.zagruzka.com:4567/integrations/mobicont/smtp-sender:$CI_COMMIT_REF_NAME
     - docker stop smtp-sender || true && docker rm -f smtp-sender || true
-    - docker run -d -p 8089:9998 --name smtp-sender --restart always gitlab.zagruzka.com:4567/integrations/mobicont/smtp-sender:$CI_COMMIT_REF_NAME
+    - docker run -d -p 8089:9998 --name smtp-sender gitlab.zagruzka.com:4567/integrations/mobicont/smtp-sender:$CI_COMMIT_REF_NAME
  # only:
 #    refs:
 #      - develop
