@@ -8,7 +8,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @EnableConfigurationProperties
-@PropertySource(value = "file:config/application.yml")
+@PropertySource(value = "file:./config/application.yml")
 public class SmtpSenderApplication {
 
     public static void main(String[] args) {
